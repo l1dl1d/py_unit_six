@@ -18,7 +18,13 @@ def rotate_left(list_one):
     :param list_one: A list consisting of exactly three integers
     :return: a list where all the elements have been shifted 1 place to the left
     """
-
+    I = list_one[0]
+    c = list_one[1]
+    u = list_one[2]
+    list_one[2] = I
+    list_one[1] = u
+    list_one[0] = c
+    return list_one
 
 
 def max_end(list_one):
@@ -28,4 +34,16 @@ def max_end(list_one):
     :param list_one: A list consisting of three elements - all integers
     :return: A list where all the elements are the larger of the first or last element of the original list
     """
-    pass # make sure to remove this line before beginning work on this function
+    o = list_one[0]
+    m = list_one[1]
+    g = list_one[2]
+    if o > g:
+        list_one[0] = o
+        list_one[1] = o
+        list_one[2] = o
+        return list_one
+    else:
+        list_one[0] = g
+        list_one[1] = g
+        list_one[2] = g
+        return list_one
