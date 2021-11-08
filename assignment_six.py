@@ -4,10 +4,22 @@ def get_birthdays():
     for x in range(23):
         r = random.randint(1, 365)
         list_one.append(r)
-        return list_one
+    return list_one
 def is_duplicates(list_one):
     for x in range(22):
-        list_one[x]
+
         for y in range(x+1, 23):
-            list_one[y]
-    if list_one[x] == [y]:
+
+            if list_one[x] == list_one[y]:
+                return True
+    return False
+def main():
+    runs = input("how many times would you like to simulate this problem?")
+    duplicate = 0
+    for x in range(runs):
+        birthdays = get_birthdays()
+        if is_duplicates(birthdays):
+            duplicate = duplicate + 1
+
+    print()
+
